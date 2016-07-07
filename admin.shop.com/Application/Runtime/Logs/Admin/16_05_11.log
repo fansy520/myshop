@@ -1,0 +1,77 @@
+[ 2016-05-11T12:03:26+08:00 ] 127.0.0.1 /Admin/Admin/index.html
+ERR: 无法加载控制器:Admin
+
+[ 2016-05-11T12:22:09+08:00 ] 127.0.0.1 /Admin/Admin/index.html
+ERR: 无法加载控制器:Admin
+
+[ 2016-05-11T13:00:05+08:00 ] 127.0.0.1 /Admin/Goods/index.html
+ERR: 无法加载控制器:Goods
+
+[ 2016-05-11T13:00:06+08:00 ] 127.0.0.1 /Admin/Order/index.html
+ERR: 无法加载控制器:Order
+
+[ 2016-05-11T13:00:06+08:00 ] 127.0.0.1 /Admin/Admin/index.html
+ERR: 无法加载控制器:Admin
+
+[ 2016-05-11T21:39:53+08:00 ] 127.0.0.1 /Admin/Article/index.html
+ERR: 1146:Table 'shop2.article' doesn't exist
+ [ SQL语句 ] : SHOW COLUMNS FROM `article`
+
+[ 2016-05-11T21:39:53+08:00 ] 127.0.0.1 /Admin/Article/index.html
+ERR: 1146:Table 'shop2.article' doesn't exist
+ [ SQL语句 ] : SHOW COLUMNS FROM `article`
+
+[ 2016-05-11T21:45:57+08:00 ] 127.0.0.1 /Admin/Article/index.html
+ERR: Think\Model:getPageResult方法不存在！
+
+[ 2016-05-11T21:50:00+08:00 ] 127.0.0.1 /Admin/Article/add.html
+ERR: 参数错误或者未定义:id
+
+[ 2016-05-11T22:11:03+08:00 ] 127.0.0.1 /Admin/Article/add.html
+ERR: Think\Model:getList方法不存在！
+
+[ 2016-05-11T22:14:46+08:00 ] 127.0.0.1 /Admin/Article/add.html
+ERR: Think\Model:getList方法不存在！
+
+[ 2016-05-11T22:20:28+08:00 ] 127.0.0.1 /Admin/Article/add.html
+ERR: Think\Model:getList方法不存在！
+
+[ 2016-05-11T22:21:17+08:00 ] 127.0.0.1 /Admin/Article/add.html
+ERR: Think\Model:getList方法不存在！
+
+[ 2016-05-11T22:21:25+08:00 ] 127.0.0.1 /Admin/Article/add.html
+ERR: Think\Model:getList方法不存在！
+
+[ 2016-05-11T22:27:43+08:00 ] 127.0.0.1 /Admin/Article/add.html
+ERR: Think\Model:getList方法不存在！
+
+[ 2016-05-11T22:31:14+08:00 ] 127.0.0.1 /Admin/Article/add.html
+ERR: Think\Model:getList方法不存在！
+
+[ 2016-05-11T22:32:29+08:00 ] 127.0.0.1 /Admin/Article/add.html
+ERR: Think\Model:getList方法不存在！
+
+[ 2016-05-11T22:35:52+08:00 ] 127.0.0.1 /Admin/Article/add.html
+ERR: Think\Model:getList方法不存在！
+
+[ 2016-05-11T22:37:51+08:00 ] 127.0.0.1 /Admin/Article/add.html
+ERR: Think\Model:getList方法不存在！
+
+[ 2016-05-11T22:40:24+08:00 ] 127.0.0.1 /Admin/Article/add.html
+ERR: Think\Model:getList方法不存在！
+
+[ 2016-05-11T23:32:59+08:00 ] 127.0.0.1 /Admin/Article/edit/id/3.html
+ERR: 1054:Unknown column 'act.id' in 'on clause'
+ [ SQL语句 ] : SELECT * FROM article ae INNER JOIN article_content as act ON ae.id=act.id  WHERE `id` = '3' LIMIT 1  
+
+[ 2016-05-11T23:34:47+08:00 ] 127.0.0.1 /Admin/Article/edit/id/3.html
+ERR: 1054:Unknown column 'article.id' in 'on clause'
+ [ SQL语句 ] : SELECT * FROM article ae INNER JOIN article_content as act ON ae.id=article.id  WHERE `id` = '3' LIMIT 1  
+
+[ 2016-05-11T23:35:13+08:00 ] 127.0.0.1 /Admin/Article/edit/id/3.html
+ERR: 1054:Unknown column 'article.id' in 'on clause'
+ [ SQL语句 ] : SELECT * FROM article ae INNER JOIN article_content as act ON ae.id=article.id  WHERE `id` = '3' LIMIT 1  
+
+[ 2016-05-11T23:43:52+08:00 ] 127.0.0.1 /Admin/Article/edit/id/2.html
+ERR: Think\Model:error方法不存在！
+

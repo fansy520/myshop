@@ -1,0 +1,282 @@
+[ 2016-05-10T12:49:13+08:00 ] 127.0.0.1 /Admin/Goods/index.html
+ERR: 无法加载控制器:Goods
+
+[ 2016-05-10T12:49:14+08:00 ] 127.0.0.1 /Admin/Index/goodsAdd.html
+ERR: 非法操作:goodsAdd
+
+[ 2016-05-10T12:49:14+08:00 ] 127.0.0.1 /Admin/Index/categoryList.html
+ERR: 非法操作:categoryList
+
+[ 2016-05-10T12:49:15+08:00 ] 127.0.0.1 /Admin/Index/brandList.html
+ERR: 非法操作:brandList
+
+[ 2016-05-10T12:49:15+08:00 ] 127.0.0.1 /Admin/Index/goodsTrash.html
+ERR: 非法操作:goodsTrash
+
+[ 2016-05-10T12:49:16+08:00 ] 127.0.0.1 /Admin/Index/orderList.html
+ERR: 非法操作:orderList
+
+[ 2016-05-10T12:49:17+08:00 ] 127.0.0.1 /Admin/Index/orderQuery.html
+ERR: 非法操作:orderQuery
+
+[ 2016-05-10T12:49:17+08:00 ] 127.0.0.1 /Admin/Index/orderAdd.html
+ERR: 非法操作:orderAdd
+
+[ 2016-05-10T12:49:17+08:00 ] 127.0.0.1 /Admin/Index/delivery_list.html
+ERR: 非法操作:delivery_list
+
+[ 2016-05-10T12:49:17+08:00 ] 127.0.0.1 /Admin/Index/back_list.html
+ERR: 非法操作:back_list
+
+[ 2016-05-10T12:49:18+08:00 ] 127.0.0.1 /Admin/Index/userList.html
+ERR: 非法操作:userList
+
+[ 2016-05-10T12:49:18+08:00 ] 127.0.0.1 /Admin/Index/userMessage.html
+ERR: 非法操作:userMessage
+
+[ 2016-05-10T12:49:19+08:00 ] 127.0.0.1 /Admin/Index/userAdd.html
+ERR: 非法操作:userAdd
+
+[ 2016-05-10T12:49:19+08:00 ] 127.0.0.1 /Admin/Index/userList.html
+ERR: 非法操作:userList
+
+[ 2016-05-10T12:49:20+08:00 ] 127.0.0.1 /Admin/Index/userAdd.html
+ERR: 非法操作:userAdd
+
+[ 2016-05-10T12:49:20+08:00 ] 127.0.0.1 /Admin/Index/userMessage.html
+ERR: 非法操作:userMessage
+
+[ 2016-05-10T12:49:20+08:00 ] 127.0.0.1 /Admin/Index/userAdd.html
+ERR: 非法操作:userAdd
+
+[ 2016-05-10T12:49:21+08:00 ] 127.0.0.1 /Admin/Index/back_list.html
+ERR: 非法操作:back_list
+
+[ 2016-05-10T12:49:21+08:00 ] 127.0.0.1 /Admin/Index/orderList.html
+ERR: 非法操作:orderList
+
+[ 2016-05-10T12:49:22+08:00 ] 127.0.0.1 /Admin/Index/brandList.html
+ERR: 非法操作:brandList
+
+[ 2016-05-10T12:49:22+08:00 ] 127.0.0.1 /Admin/Index/goodsAdd.html
+ERR: 非法操作:goodsAdd
+
+[ 2016-05-10T12:49:22+08:00 ] 127.0.0.1 /Admin/Goods/index.html
+ERR: 无法加载控制器:Goods
+
+[ 2016-05-10T12:49:31+08:00 ] 127.0.0.1 /Admin/Goods/index.html
+ERR: 无法加载控制器:Goods
+
+[ 2016-05-10T13:32:46+08:00 ] 127.0.0.1 /Admin/Article/index.html
+ERR: 模板不存在:./Application/Admin/View/Article/index.html
+
+[ 2016-05-10T13:33:32+08:00 ] 127.0.0.1 /Admin/Article/index.html
+ERR: 模板不存在:./Application/Admin/View/Article/index.html
+
+[ 2016-05-10T13:33:34+08:00 ] 127.0.0.1 /Admin/Article/index.html
+ERR: 模板不存在:./Application/Admin/View/Article/index.html
+
+[ 2016-05-10T13:33:34+08:00 ] 127.0.0.1 /Admin/Article/index.html
+ERR: 模板不存在:./Application/Admin/View/Article/index.html
+
+[ 2016-05-10T17:13:12+08:00 ] 127.0.0.1 /Admin/Goods/index.html
+ERR: 无法加载控制器:Goods
+
+[ 2016-05-10T17:13:12+08:00 ] 127.0.0.1 /Admin/Index/goodsAdd.html
+ERR: 非法操作:goodsAdd
+
+[ 2016-05-10T17:13:13+08:00 ] 127.0.0.1 /Admin/Index/categoryList.html
+ERR: 非法操作:categoryList
+
+[ 2016-05-10T17:13:13+08:00 ] 127.0.0.1 /Admin/Index/brandList.html
+ERR: 非法操作:brandList
+
+[ 2016-05-10T17:13:14+08:00 ] 127.0.0.1 /Admin/Index/goodsTrash.html
+ERR: 非法操作:goodsTrash
+
+[ 2016-05-10T17:13:14+08:00 ] 127.0.0.1 /Admin/Goods/index.html
+ERR: 无法加载控制器:Goods
+
+[ 2016-05-10T17:15:36+08:00 ] 127.0.0.1 /Admin/Goods/index.html
+ERR: 无法加载控制器:Goods
+
+[ 2016-05-10T17:22:54+08:00 ] 127.0.0.1 /Admin/Admin/index.html
+ERR: 无法加载控制器:Admin
+
+[ 2016-05-10T17:23:04+08:00 ] 127.0.0.1 /Admin/Goods/index.html
+ERR: 无法加载控制器:Goods
+
+[ 2016-05-10T17:23:05+08:00 ] 127.0.0.1 /Admin/Goods/index.html
+ERR: 无法加载控制器:Goods
+
+[ 2016-05-10T17:23:07+08:00 ] 127.0.0.1 /Admin/Order/index.html
+ERR: 无法加载控制器:Order
+
+[ 2016-05-10T17:23:07+08:00 ] 127.0.0.1 /Admin/Admin/index.html
+ERR: 无法加载控制器:Admin
+
+[ 2016-05-10T17:37:50+08:00 ] 127.0.0.1 /Admin/Article/add.html
+ERR: 非法操作:add
+
+[ 2016-05-10T17:38:47+08:00 ] 127.0.0.1 /Admin/Article/add.html
+ERR: 模板不存在:./Application/Admin/View/Article/add.html
+
+[ 2016-05-10T19:11:23+08:00 ] 127.0.0.1 /Admin/Goods/index.html
+ERR: 无法加载控制器:Goods
+
+[ 2016-05-10T19:11:26+08:00 ] 127.0.0.1 /Admin/ArticleCategory/index.html
+ERR: 无法加载控制器:ArticleCategory
+
+[ 2016-05-10T19:17:45+08:00 ] 127.0.0.1 /Admin/ArticleCategory/index.html
+ERR: 无法加载控制器:ArticleCategory
+
+[ 2016-05-10T19:18:02+08:00 ] 127.0.0.1 /Admin/ArticleCategory/index.html
+ERR: 无法加载控制器:ArticleCategory
+
+[ 2016-05-10T19:18:03+08:00 ] 127.0.0.1 /Admin/ArticleCategory/index.html
+ERR: 无法加载控制器:ArticleCategory
+
+[ 2016-05-10T19:18:03+08:00 ] 127.0.0.1 /Admin/ArticleCategory/index.html
+ERR: 无法加载控制器:ArticleCategory
+
+[ 2016-05-10T19:18:03+08:00 ] 127.0.0.1 /Admin/ArticleCategory/index.html
+ERR: 无法加载控制器:ArticleCategory
+
+[ 2016-05-10T19:18:03+08:00 ] 127.0.0.1 /Admin/ArticleCategory/index.html
+ERR: 无法加载控制器:ArticleCategory
+
+[ 2016-05-10T19:18:04+08:00 ] 127.0.0.1 /Admin/ArticleCategory/index.html
+ERR: 无法加载控制器:ArticleCategory
+
+[ 2016-05-10T19:18:04+08:00 ] 127.0.0.1 /Admin/ArticleCategory/index.html
+ERR: 无法加载控制器:ArticleCategory
+
+[ 2016-05-10T19:18:04+08:00 ] 127.0.0.1 /Admin/ArticleCategory/index.html
+ERR: 无法加载控制器:ArticleCategory
+
+[ 2016-05-10T19:18:04+08:00 ] 127.0.0.1 /Admin/ArticleCategory/index.html
+ERR: 无法加载控制器:ArticleCategory
+
+[ 2016-05-10T19:18:04+08:00 ] 127.0.0.1 /Admin/ArticleCategory/index.html
+ERR: 无法加载控制器:ArticleCategory
+
+[ 2016-05-10T19:18:04+08:00 ] 127.0.0.1 /Admin/ArticleCategory/index.html
+ERR: 无法加载控制器:ArticleCategory
+
+[ 2016-05-10T19:18:05+08:00 ] 127.0.0.1 /Admin/ArticleCategory/index.html
+ERR: 无法加载控制器:ArticleCategory
+
+[ 2016-05-10T19:18:16+08:00 ] 127.0.0.1 /Admin/ArticleCategory/index.html
+ERR: 无法加载控制器:ArticleCategory
+
+[ 2016-05-10T19:18:42+08:00 ] 127.0.0.1 /Admin/ArticleCategory/index.html
+ERR: 无法加载控制器:ArticleCategory
+
+[ 2016-05-10T19:18:43+08:00 ] 127.0.0.1 /Admin/ArticleCategory/index.html
+ERR: 无法加载控制器:ArticleCategory
+
+[ 2016-05-10T19:18:43+08:00 ] 127.0.0.1 /Admin/ArticleCategory/index.html
+ERR: 无法加载控制器:ArticleCategory
+
+[ 2016-05-10T19:18:43+08:00 ] 127.0.0.1 /Admin/ArticleCategory/index.html
+ERR: 无法加载控制器:ArticleCategory
+
+[ 2016-05-10T19:18:43+08:00 ] 127.0.0.1 /Admin/ArticleCategory/index.html
+ERR: 无法加载控制器:ArticleCategory
+
+[ 2016-05-10T19:18:46+08:00 ] 127.0.0.1 /Admin/ArticleCategory/index.html
+ERR: 无法加载控制器:ArticleCategory
+
+[ 2016-05-10T19:18:50+08:00 ] 127.0.0.1 /Admin/ArticleCategory/index.html
+ERR: 无法加载控制器:ArticleCategory
+
+[ 2016-05-10T19:18:51+08:00 ] 127.0.0.1 /Admin/ArticleCategory/index.html
+ERR: 无法加载控制器:ArticleCategory
+
+[ 2016-05-10T19:18:51+08:00 ] 127.0.0.1 /Admin/ArticleCategory/index.html
+ERR: 无法加载控制器:ArticleCategory
+
+[ 2016-05-10T19:18:51+08:00 ] 127.0.0.1 /Admin/ArticleCategory/index.html
+ERR: 无法加载控制器:ArticleCategory
+
+[ 2016-05-10T19:18:58+08:00 ] 127.0.0.1 /Admin/ArticleCategory/index.html
+ERR: 无法加载控制器:ArticleCategory
+
+[ 2016-05-10T19:18:59+08:00 ] 127.0.0.1 /Admin/ArticleCategory/index.html
+ERR: 无法加载控制器:ArticleCategory
+
+[ 2016-05-10T19:19:24+08:00 ] 127.0.0.1 /Admin/ArticleCategory/index.html
+ERR: 无法加载控制器:ArticleCategory
+
+[ 2016-05-10T19:19:25+08:00 ] 127.0.0.1 /Admin/ArticleCategory/index.html
+ERR: 无法加载控制器:ArticleCategory
+
+[ 2016-05-10T19:19:29+08:00 ] 127.0.0.1 /Admin/ArticleCategory/index.html
+ERR: 无法加载控制器:ArticleCategory
+
+[ 2016-05-10T19:20:38+08:00 ] 127.0.0.1 /Admin/ArticleCategory/index.html
+ERR: 无法加载控制器:ArticleCategory
+
+[ 2016-05-10T19:20:38+08:00 ] 127.0.0.1 /Admin/ArticleCategory/index.html
+ERR: 无法加载控制器:ArticleCategory
+
+[ 2016-05-10T19:20:39+08:00 ] 127.0.0.1 /Admin/ArticleCategory/index.html
+ERR: 无法加载控制器:ArticleCategory
+
+[ 2016-05-10T19:20:39+08:00 ] 127.0.0.1 /Admin/ArticleCategory/index.html
+ERR: 无法加载控制器:ArticleCategory
+
+[ 2016-05-10T19:21:08+08:00 ] 127.0.0.1 /Admin/ArticleCategory/index.html
+ERR: 无法加载控制器:ArticleCategory
+
+[ 2016-05-10T19:21:14+08:00 ] 127.0.0.1 /Admin/ArticleCategory/index.html
+ERR: 无法加载控制器:ArticleCategory
+
+[ 2016-05-10T19:21:42+08:00 ] 127.0.0.1 /Admin/ArticleCategory/index.html
+ERR: 无法加载控制器:ArticleCategory
+
+[ 2016-05-10T19:21:59+08:00 ] 127.0.0.1 /Admin/ArticleCategory/index.html
+ERR: 无法加载控制器:ArticleCategory
+
+[ 2016-05-10T19:22:00+08:00 ] 127.0.0.1 /Admin/ArticleCategory/index.html
+ERR: 无法加载控制器:ArticleCategory
+
+[ 2016-05-10T19:22:00+08:00 ] 127.0.0.1 /Admin/ArticleCategory/index.html
+ERR: 无法加载控制器:ArticleCategory
+
+[ 2016-05-10T19:22:00+08:00 ] 127.0.0.1 /Admin/ArticleCategory/index.html
+ERR: 无法加载控制器:ArticleCategory
+
+[ 2016-05-10T19:22:09+08:00 ] 127.0.0.1 /Admin/ArticleCategory/index.html
+ERR: 无法加载控制器:ArticleCategory
+
+[ 2016-05-10T19:22:17+08:00 ] 127.0.0.1 /Admin/ArticleCategory/index.html
+ERR: 无法加载控制器:ArticleCategory
+
+[ 2016-05-10T19:22:30+08:00 ] 127.0.0.1 /Admin/ArticleCategory/index.html
+ERR: 无法加载控制器:ArticleCategory
+
+[ 2016-05-10T19:22:38+08:00 ] 127.0.0.1 /Admin/ArticleCategory/index.html
+ERR: 无法加载控制器:ArticleCategory
+
+[ 2016-05-10T19:22:39+08:00 ] 127.0.0.1 /Admin/ArticleCategory/index.html
+ERR: 无法加载控制器:ArticleCategory
+
+[ 2016-05-10T19:23:39+08:00 ] 127.0.0.1 /Admin/ArticleCategory/index.html
+ERR: 无法加载控制器:ArticleCategory
+
+[ 2016-05-10T19:23:42+08:00 ] 127.0.0.1 /Admin/ArticleCategory/index.html
+ERR: 无法加载控制器:ArticleCategory
+
+[ 2016-05-10T19:23:43+08:00 ] 127.0.0.1 /Admin/ArticleCategory/index.html
+ERR: 无法加载控制器:ArticleCategory
+
+[ 2016-05-10T19:23:46+08:00 ] 127.0.0.1 /Admin/ArticleCategory/index.html
+ERR: 无法加载控制器:ArticleCategory
+
+[ 2016-05-10T19:24:29+08:00 ] 127.0.0.1 /Admin/ArticleCategory/index.html
+ERR: 模板不存在:./Application/Admin/View/ArticleCategory/index.html
+
+[ 2016-05-10T19:25:29+08:00 ] 127.0.0.1 /Admin/ArticleCategory/index.html
+ERR: 模板不存在:./Application/Admin/View/ArticleCategory/index.html
+

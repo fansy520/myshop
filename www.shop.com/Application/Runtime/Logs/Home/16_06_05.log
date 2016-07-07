@@ -1,0 +1,890 @@
+[ 2016-06-05T19:36:47+08:00 ] 127.0.0.1 /favicon.ico
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.017001s ]
+
+[ 2016-06-05T19:36:48+08:00 ] 127.0.0.1 /index.php
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_begin ] --START--
+NOTIC: [8] Undefined index: id E:\IT\www508\ThinkPHP\Library\Behavior\ReadHtmlCacheBehavior.class.php 第 68 行.
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.095006s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.095006s ]
+
+[ 2016-06-05T19:37:11+08:00 ] 127.0.0.1 /index.php
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_begin ] --START--
+NOTIC: [8] Undefined index: id E:\IT\www508\ThinkPHP\Library\Behavior\ReadHtmlCacheBehavior.class.php 第 68 行.
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.004000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004000s ]
+SQL: SHOW COLUMNS FROM `goods_category` [ RunTime:0.0680s ]
+SQL: SELECT * FROM `goods_category` WHERE `status` = 1  [ RunTime:0.0100s ]
+SQL: SHOW COLUMNS FROM `article_category` [ RunTime:0.0680s ]
+SQL: SELECT `id`,`name` FROM `article_category` WHERE `is_help` = 1 AND `status` = 1  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `article` [ RunTime:0.0620s ]
+SQL: SELECT `id`,`id`,`name` FROM `article` WHERE `article_category_id` = 1 LIMIT 6   [ RunTime:0.1040s ]
+SQL: SELECT `id`,`id`,`name` FROM `article` WHERE `article_category_id` = 2 LIMIT 6   [ RunTime:0.0010s ]
+SQL: SELECT `id`,`id`,`name` FROM `article` WHERE `article_category_id` = 3 LIMIT 6   [ RunTime:0.0010s ]
+SQL: SELECT `id`,`id`,`name` FROM `article` WHERE `article_category_id` = 4 LIMIT 6   [ RunTime:0.0010s ]
+SQL: SELECT `id`,`id`,`name` FROM `article` WHERE `article_category_id` = 5 LIMIT 6   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `goods` [ RunTime:0.2040s ]
+SQL: SELECT * FROM `goods` WHERE (  goods_status&1 ) AND `is_on_sale` = 1 AND `status` = 1  [ RunTime:0.0870s ]
+SQL: SELECT * FROM `goods` WHERE (  goods_status&2 ) AND `is_on_sale` = 1 AND `status` = 1  [ RunTime:0.0010s ]
+SQL: SELECT * FROM `goods` WHERE (  goods_status&4 ) AND `is_on_sale` = 1 AND `status` = 1  [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.227013s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.228013s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.019001s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.020002s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.024001s ]
+INFO: [ app_end ] --END-- [ RunTime:0.025001s ]
+
+[ 2016-06-05T19:37:12+08:00 ] 127.0.0.1 /Application/Uploads/2016-05-25/5745c1eed21fb.jpg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-06-05T19:37:13+08:00 ] 127.0.0.1 /Member/getUserInfo.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.003000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.004001s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004001s ]
+SQL: SHOW COLUMNS FROM `member` [ RunTime:0.2740s ]
+
+[ 2016-06-05T19:37:23+08:00 ] 127.0.0.1 /Index/goods/id/4.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.114006s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.114006s ]
+SQL: SHOW COLUMNS FROM `goods` [ RunTime:0.0110s ]
+SQL: SELECT g.*,gi.content,b.name as bname FROM goods g INNER JOIN goods_intro AS gi ON gi.goods_id=g.id INNER JOIN brand as b on g.brand_id=b.id  WHERE g.id = '4' LIMIT 1   [ RunTime:0.1610s ]
+SQL: SHOW COLUMNS FROM `goods_gallery` [ RunTime:0.0190s ]
+SQL: SELECT `path` FROM `goods_gallery` WHERE `goods_id` = '4'  [ RunTime:0.0020s ]
+SQL: SHOW COLUMNS FROM `member_goods_price` [ RunTime:0.0460s ]
+SQL: SELECT `member_level_id`,`price` FROM `member_goods_price` WHERE `goods_id` = 4  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `member_level` [ RunTime:0.0490s ]
+SQL: SELECT `id`,`name`,`discount` FROM `member_level` WHERE `status` = 1  [ RunTime:0.0000s ]
+NOTIC: [2] Invalid argument supplied for foreach() E:\IT\www508\www.shop.com\Application\Home\Model\GoodsModel.class.php 第 46 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.002000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.002000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.122007s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.122007s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.003000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.003000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.013001s ]
+INFO: [ app_end ] --END-- [ RunTime:0.013001s ]
+
+[ 2016-06-05T19:37:24+08:00 ] 127.0.0.1 /Application/Uploads/2016-05-25/5745c1e82f6ee.jpg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
+
+[ 2016-06-05T19:37:24+08:00 ] 127.0.0.1 /Member/getUserInfo.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `member` [ RunTime:0.0120s ]
+
+[ 2016-06-05T19:37:24+08:00 ] 127.0.0.1 /Public/Home/images/zoomloader.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
+
+[ 2016-06-05T19:37:24+08:00 ] 127.0.0.1 /Goods/clickNum.html?id=4
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.003001s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.010001s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.011001s ]
+
+[ 2016-06-05T19:37:31+08:00 ] 127.0.0.1 /Member/getUserInfo.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.008001s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.008001s ]
+SQL: SHOW COLUMNS FROM `member` [ RunTime:0.0150s ]
+
+[ 2016-06-05T19:37:34+08:00 ] 127.0.0.1 /ueditor/php/upload/image/20160525/1464113235675728.jpg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
+
+: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.198012s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.198012s ]
+SQL: SHOW COLUMNS FROM `goods` [ RunTime:0.0100s ]
+SQL: SELECT g.*,gi.content,b.name as bname FROM goods g INNER JOIN goods_intro AS gi ON gi.goods_id=g.id INNER JOIN brand as b on g.brand_id=b.id  WHERE g.id = '6' LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `goods_gallery` [ RunTime:0.0090s ]
+SQL: SELECT `path` FROM `goods_gallery` WHERE `goods_id` = '6'  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `member_goods_price` [ RunTime:0.0110s ]
+SQL: SELECT `member_level_id`,`price` FROM `member_goods_price` WHERE `goods_id` = 6  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `member_level` [ RunTime:0.0090s ]
+SQL: SELECT `id`,`name`,`discount` FROM `member_level` WHERE `status` = 1  [ RunTime:0.0000s ]
+NOTIC: [2] Invalid argument supplied for foreach() E:\IT\www508\www.shop.com\Application\Home\Model\GoodsModel.class.php 第 46 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.002000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.002000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.105006s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.105006s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.003000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.003000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2016-06-05T19:37:34+08:00 ] 127.0.0.1 /Member/getUserInfo.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002001s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003001s ]
+SQL: SHOW COLUMNS FROM `member` [ RunTime:0.0130s ]
+
+[ 2016-06-05T19:37:35+08:00 ] 127.0.0.1 /Goods/clickNum.html?id=6
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+
+[ 2016-06-05T19:37:40+08:00 ] 127.0.0.1 /Cart/addCart.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `shopping_car` [ RunTime:0.1000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.046002s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.046002s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.003000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.003000s ]
+
+[ 2016-06-05T19:37:42+08:00 ] 127.0.0.1 /Cart/flow1.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.001000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `shopping_car` [ RunTime:0.0090s ]
+SQL: SHOW COLUMNS FROM `goods` [ RunTime:0.0110s ]
+SQL: SELECT * FROM `goods` WHERE `id` IN (7,6)  [ RunTime:0.0770s ]
+SQL: SHOW COLUMNS FROM `member_level` [ RunTime:0.0110s ]
+SQL: SELECT `id`,`discount` FROM `member_level` WHERE `bottom` <= 0 AND `top` >= 0 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `member_goods_price` [ RunTime:0.0110s ]
+SQL: SELECT `price` FROM `member_goods_price` WHERE `goods_id` = 6 AND `member_level_id` = null LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT `price` FROM `member_goods_price` WHERE `goods_id` = 7 AND `member_level_id` = null LIMIT 1   [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: user_info E:\IT\www508\www.shop.com\Application\Runtime\Cache\Home\632645a6365f3d366ac91b0ef93b460e.php 第 133 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.251014s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.251014s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2016-06-05T19:37:42+08:00 ] 127.0.0.1 /Member/getUserInfo.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.004000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.005000s ]
+SQL: SHOW COLUMNS FROM `member` [ RunTime:0.0130s ]
+
+[ 2016-06-05T19:39:05+08:00 ] 127.0.0.1 /Cart/flow1.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002001s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002001s ]
+SQL: SHOW COLUMNS FROM `shopping_car` [ RunTime:0.0140s ]
+SQL: SHOW COLUMNS FROM `goods` [ RunTime:0.0110s ]
+SQL: SELECT * FROM `goods` WHERE `id` IN (7,6)  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `member_level` [ RunTime:0.0120s ]
+SQL: SELECT `id`,`discount` FROM `member_level` WHERE `bottom` <= 0 AND `top` >= 0 LIMIT 1   [ RunTime:0.0020s ]
+SQL: SHOW COLUMNS FROM `member_goods_price` [ RunTime:0.0090s ]
+SQL: SELECT `price` FROM `member_goods_price` WHERE `goods_id` = 6 AND `member_level_id` = null LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT `price` FROM `member_goods_price` WHERE `goods_id` = 7 AND `member_level_id` = null LIMIT 1   [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: user_info E:\IT\www508\www.shop.com\Application\Runtime\Cache\Home\632645a6365f3d366ac91b0ef93b460e.php 第 133 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.036002s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.037002s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2016-06-05T19:39:05+08:00 ] 127.0.0.1 /Member/getUserInfo.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.003000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003000s ]
+SQL: SHOW COLUMNS FROM `member` [ RunTime:0.0110s ]
+
+[ 2016-06-05T19:39:06+08:00 ] 127.0.0.1 /Cart/flow1.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002001s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002001s ]
+SQL: SHOW COLUMNS FROM `shopping_car` [ RunTime:0.0110s ]
+SQL: SHOW COLUMNS FROM `goods` [ RunTime:0.0100s ]
+SQL: SELECT * FROM `goods` WHERE `id` IN (7,6)  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `member_level` [ RunTime:0.0090s ]
+SQL: SELECT `id`,`discount` FROM `member_level` WHERE `bottom` <= 0 AND `top` >= 0 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `member_goods_price` [ RunTime:0.0100s ]
+SQL: SELECT `price` FROM `member_goods_price` WHERE `goods_id` = 6 AND `member_level_id` = null LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `price` FROM `member_goods_price` WHERE `goods_id` = 7 AND `member_level_id` = null LIMIT 1   [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Undefined variable: user_info E:\IT\www508\www.shop.com\Application\Runtime\Cache\Home\632645a6365f3d366ac91b0ef93b460e.php 第 133 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.037002s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.037002s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.003000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.003000s ]
+
+[ 2016-06-05T19:39:07+08:00 ] 127.0.0.1 /Member/getUserInfo.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `member` [ RunTime:0.0090s ]
+
+[ 2016-06-05T19:39:07+08:00 ] 127.0.0.1 /Cart/flow1.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002001s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003000s ]
+SQL: SHOW COLUMNS FROM `shopping_car` [ RunTime:0.0130s ]
+SQL: SHOW COLUMNS FROM `goods` [ RunTime:0.0090s ]
+SQL: SELECT * FROM `goods` WHERE `id` IN (7,6)  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `member_level` [ RunTime:0.0090s ]
+SQL: SELECT `id`,`discount` FROM `member_level` WHERE `bottom` <= 0 AND `top` >= 0 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `member_goods_price` [ RunTime:0.0080s ]
+SQL: SELECT `price` FROM `member_goods_price` WHERE `goods_id` = 6 AND `member_level_id` = null LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT `price` FROM `member_goods_price` WHERE `goods_id` = 7 AND `member_level_id` = null LIMIT 1   [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Undefined variable: user_info E:\IT\www508\www.shop.com\Application\Runtime\Cache\Home\632645a6365f3d366ac91b0ef93b460e.php 第 133 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.033002s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.033002s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2016-06-05T19:39:08+08:00 ] 127.0.0.1 /Member/getUserInfo.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.001000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.003000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `member` [ RunTime:0.0090s ]
+
+[ 2016-06-05T19:39:08+08:00 ] 127.0.0.1 /Cart/flow1.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `shopping_car` [ RunTime:0.0090s ]
+SQL: SHOW COLUMNS FROM `goods` [ RunTime:0.0100s ]
+SQL: SELECT * FROM `goods` WHERE `id` IN (7,6)  [ RunTime:0.0020s ]
+SQL: SHOW COLUMNS FROM `member_level` [ RunTime:0.0090s ]
+SQL: SELECT `id`,`discount` FROM `member_level` WHERE `bottom` <= 0 AND `top` >= 0 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `member_goods_price` [ RunTime:0.0100s ]
+SQL: SELECT `price` FROM `member_goods_price` WHERE `goods_id` = 6 AND `member_level_id` = null LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT `price` FROM `member_goods_price` WHERE `goods_id` = 7 AND `member_level_id` = null LIMIT 1   [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Undefined variable: user_info E:\IT\www508\www.shop.com\Application\Runtime\Cache\Home\632645a6365f3d366ac91b0ef93b460e.php 第 133 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.034002s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.035002s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2016-06-05T19:39:09+08:00 ] 127.0.0.1 /Member/getUserInfo.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `member` [ RunTime:0.1610s ]
+
+[ 2016-06-05T19:39:09+08:00 ] 127.0.0.1 /Cart/flow1.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `shopping_car` [ RunTime:0.0090s ]
+SQL: SHOW COLUMNS FROM `goods` [ RunTime:0.0110s ]
+SQL: SELECT * FROM `goods` WHERE `id` IN (7,6)  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `member_level` [ RunTime:0.0090s ]
+SQL: SELECT `id`,`discount` FROM `member_level` WHERE `bottom` <= 0 AND `top` >= 0 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `member_goods_price` [ RunTime:0.0100s ]
+SQL: SELECT `price` FROM `member_goods_price` WHERE `goods_id` = 6 AND `member_level_id` = null LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT `price` FROM `member_goods_price` WHERE `goods_id` = 7 AND `member_level_id` = null LIMIT 1   [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Undefined variable: user_info E:\IT\www508\www.shop.com\Application\Runtime\Cache\Home\632645a6365f3d366ac91b0ef93b460e.php 第 133 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.034002s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.034002s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2016-06-05T19:39:10+08:00 ] 127.0.0.1 /Member/getUserInfo.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.003000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004000s ]
+SQL: SHOW COLUMNS FROM `member` [ RunTime:0.0100s ]
+
+[ 2016-06-05T19:39:11+08:00 ] 127.0.0.1 /Member/login.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `member` [ RunTime:0.0100s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Undefined variable: user_info E:\IT\www508\www.shop.com\Application\Runtime\Cache\Home\c4e9b6f7cdab83725c9facfcc5440efe.php 第 140 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.060003s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.060003s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2016-06-05T19:39:11+08:00 ] 127.0.0.1 /Member/getUserInfo.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.003000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004000s ]
+SQL: SHOW COLUMNS FROM `member` [ RunTime:0.0090s ]
+
+[ 2016-06-05T19:39:12+08:00 ] 127.0.0.1 /Captcha/captcha/nocache/1465126751.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.003001s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004001s ]
+
+[ 2016-06-05T19:39:24+08:00 ] 127.0.0.1 /Member/login.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003000s ]
+SQL: SHOW COLUMNS FROM `member` [ RunTime:0.0090s ]
+SQL: SELECT * FROM `member` WHERE `username` = 'fansy2' LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `shopping_car` [ RunTime:0.0090s ]
+SQL: DELETE FROM `shopping_car` WHERE `member_id` = 1 AND `goods_id` IN (7,6) [ RunTime:0.1090s ]
+SQL: INSERT INTO `shopping_car` (`goods_id`,`amount`,`member_id`) VALUES ('7','1','1'),('6','1','1') [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.024001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.024001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.003000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.003000s ]
+
+[ 2016-06-05T19:39:25+08:00 ] 127.0.0.1 /Index/index/nocache/1465126764.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+NOTIC: [8] Undefined index: id E:\IT\www508\ThinkPHP\Library\Behavior\ReadHtmlCacheBehavior.class.php 第 68 行.
+
+[ 2016-06-05T19:39:26+08:00 ] 127.0.0.1 /Application/Uploads/2016-05-25/5745c1eed21fb.jpg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.003000s ]
+
+[ 2016-06-05T19:39:26+08:00 ] 127.0.0.1 /Member/getUserInfo.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.001000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.003000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004000s ]
+SQL: SHOW COLUMNS FROM `member` [ RunTime:0.0120s ]
+
+[ 2016-06-05T19:39:29+08:00 ] 127.0.0.1 /cart/flow1.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `shopping_car` [ RunTime:0.0090s ]
+SQL: SELECT `goods_id`,`amount` FROM `shopping_car` WHERE `member_id` = 1  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `goods` [ RunTime:0.0100s ]
+SQL: SELECT * FROM `goods` WHERE `id` IN (4,7,6)  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `member` [ RunTime:0.0100s ]
+SQL: SELECT `score` FROM `member` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `member_level` [ RunTime:0.0100s ]
+SQL: SELECT `id`,`discount` FROM `member_level` WHERE `bottom` <= '341' AND `top` >= '341' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `member_goods_price` [ RunTime:0.0130s ]
+SQL: SELECT `price` FROM `member_goods_price` WHERE `goods_id` = 4 AND `member_level_id` = null LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT `price` FROM `member_goods_price` WHERE `goods_id` = 6 AND `member_level_id` = null LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT `price` FROM `member_goods_price` WHERE `goods_id` = 7 AND `member_level_id` = null LIMIT 1   [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: user_info E:\IT\www508\www.shop.com\Application\Runtime\Cache\Home\632645a6365f3d366ac91b0ef93b460e.php 第 133 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.051002s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.051002s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002001s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.004000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.004000s ]
+
+[ 2016-06-05T19:39:29+08:00 ] 127.0.0.1 /Application/Uploads/2016-05-25/5745c1eed21fb.jpg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002001s ]
+
+[ 2016-06-05T19:39:29+08:00 ] 127.0.0.1 /Member/getUserInfo.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `member` [ RunTime:0.0120s ]
+
+[ 2016-06-05T19:39:31+08:00 ] 127.0.0.1 /cart/flow1.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002001s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002001s ]
+SQL: SHOW COLUMNS FROM `shopping_car` [ RunTime:0.0070s ]
+SQL: SELECT `goods_id`,`amount` FROM `shopping_car` WHERE `member_id` = 1  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `goods` [ RunTime:0.0100s ]
+SQL: SELECT * FROM `goods` WHERE `id` IN (4,7,6)  [ RunTime:0.0020s ]
+SQL: SHOW COLUMNS FROM `member` [ RunTime:0.0100s ]
+SQL: SELECT `score` FROM `member` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `member_level` [ RunTime:0.0100s ]
+SQL: SELECT `id`,`discount` FROM `member_level` WHERE `bottom` <= '341' AND `top` >= '341' LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `member_goods_price` [ RunTime:0.0100s ]
+SQL: SELECT `price` FROM `member_goods_price` WHERE `goods_id` = 4 AND `member_level_id` = null LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `price` FROM `member_goods_price` WHERE `goods_id` = 6 AND `member_level_id` = null LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `price` FROM `member_goods_price` WHERE `goods_id` = 7 AND `member_level_id` = null LIMIT 1   [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Undefined variable: user_info E:\IT\www508\www.shop.com\Application\Runtime\Cache\Home\632645a6365f3d366ac91b0ef93b460e.php 第 133 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.036002s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.036002s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2016-06-05T19:39:31+08:00 ] 127.0.0.1 /Application/Uploads/2016-05-25/5745c1eed21fb.jpg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
+
+[ 2016-06-05T19:39:31+08:00 ] 127.0.0.1 /Member/getUserInfo.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `member` [ RunTime:0.0110s ]
+
+[ 2016-06-05T19:39:32+08:00 ] 127.0.0.1 /cart/flow1.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002001s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `shopping_car` [ RunTime:0.0100s ]
+SQL: SELECT `goods_id`,`amount` FROM `shopping_car` WHERE `member_id` = 1  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `goods` [ RunTime:0.0110s ]
+SQL: SELECT * FROM `goods` WHERE `id` IN (4,7,6)  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `member` [ RunTime:0.0110s ]
+SQL: SELECT `score` FROM `member` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `member_level` [ RunTime:0.0100s ]
+SQL: SELECT `id`,`discount` FROM `member_level` WHERE `bottom` <= '341' AND `top` >= '341' LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `member_goods_price` [ RunTime:0.0090s ]
+SQL: SELECT `price` FROM `member_goods_price` WHERE `goods_id` = 4 AND `member_level_id` = null LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `price` FROM `member_goods_price` WHERE `goods_id` = 6 AND `member_level_id` = null LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `price` FROM `member_goods_price` WHERE `goods_id` = 7 AND `member_level_id` = null LIMIT 1   [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: user_info E:\IT\www508\www.shop.com\Application\Runtime\Cache\Home\632645a6365f3d366ac91b0ef93b460e.php 第 133 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.038002s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.038002s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.003000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.004001s ]
+
+[ 2016-06-05T19:39:32+08:00 ] 127.0.0.1 /Application/Uploads/2016-05-25/5745c1eed21fb.jpg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
+
+[ 2016-06-05T19:39:33+08:00 ] 127.0.0.1 /Member/getUserInfo.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.003000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.005000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.005000s ]
+SQL: SHOW COLUMNS FROM `member` [ RunTime:0.0110s ]
+
+[ 2016-06-05T19:39:34+08:00 ] 127.0.0.1 /cart/flow1.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.003000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003000s ]
+SQL: SHOW COLUMNS FROM `shopping_car` [ RunTime:0.0120s ]
+SQL: SELECT `goods_id`,`amount` FROM `shopping_car` WHERE `member_id` = 1  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `goods` [ RunTime:0.0180s ]
+SQL: SELECT * FROM `goods` WHERE `id` IN (4,7,6)  [ RunTime:0.0040s ]
+SQL: SHOW COLUMNS FROM `member` [ RunTime:0.0130s ]
+SQL: SELECT `score` FROM `member` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0020s ]
+SQL: SHOW COLUMNS FROM `member_level` [ RunTime:0.0130s ]
+SQL: SELECT `id`,`discount` FROM `member_level` WHERE `bottom` <= '341' AND `top` >= '341' LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `member_goods_price` [ RunTime:0.0130s ]
+SQL: SELECT `price` FROM `member_goods_price` WHERE `goods_id` = 4 AND `member_level_id` = null LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT `price` FROM `member_goods_price` WHERE `goods_id` = 6 AND `member_level_id` = null LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT `price` FROM `member_goods_price` WHERE `goods_id` = 7 AND `member_level_id` = null LIMIT 1   [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Undefined variable: user_info E:\IT\www508\www.shop.com\Application\Runtime\Cache\Home\632645a6365f3d366ac91b0ef93b460e.php 第 133 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.075005s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.075005s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.007000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.007000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.004000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.007000s ]
+
+[ 2016-06-05T19:39:34+08:00 ] 127.0.0.1 /Application/Uploads/2016-05-25/5745c1eed21fb.jpg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
+
+[ 2016-06-05T19:39:34+08:00 ] 127.0.0.1 /Member/getUserInfo.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.003001s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003001s ]
+SQL: SHOW COLUMNS FROM `member` [ RunTime:0.0100s ]
+
+[ 2016-06-05T19:39:35+08:00 ] 127.0.0.1 /cart/flow1.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `shopping_car` [ RunTime:0.0090s ]
+SQL: SELECT `goods_id`,`amount` FROM `shopping_car` WHERE `member_id` = 1  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `goods` [ RunTime:0.0140s ]
+SQL: SELECT * FROM `goods` WHERE `id` IN (4,7,6)  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `member` [ RunTime:0.0090s ]
+SQL: SELECT `score` FROM `member` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `member_level` [ RunTime:0.0090s ]
+SQL: SELECT `id`,`discount` FROM `member_level` WHERE `bottom` <= '341' AND `top` >= '341' LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `member_goods_price` [ RunTime:0.0090s ]
+SQL: SELECT `price` FROM `member_goods_price` WHERE `goods_id` = 4 AND `member_level_id` = null LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `price` FROM `member_goods_price` WHERE `goods_id` = 6 AND `member_level_id` = null LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `price` FROM `member_goods_price` WHERE `goods_id` = 7 AND `member_level_id` = null LIMIT 1   [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: user_info E:\IT\www508\www.shop.com\Application\Runtime\Cache\Home\632645a6365f3d366ac91b0ef93b460e.php 第 133 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.036003s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.036003s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2016-06-05T19:39:35+08:00 ] 127.0.0.1 /Application/Uploads/2016-05-25/5745c1eed21fb.jpg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
+
+[ 2016-06-05T19:39:35+08:00 ] 127.0.0.1 /Member/getUserInfo.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.003001s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003001s ]
+SQL: SHOW COLUMNS FROM `member` [ RunTime:0.0090s ]
+
+[ 2016-06-05T19:39:36+08:00 ] 127.0.0.1 /cart/flow1.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.009000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.009000s ]
+SQL: SHOW COLUMNS FROM `shopping_car` [ RunTime:0.0100s ]
+SQL: SELECT `goods_id`,`amount` FROM `shopping_car` WHERE `member_id` = 1  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `goods` [ RunTime:0.0100s ]
+SQL: SELECT * FROM `goods` WHERE `id` IN (4,7,6)  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `member` [ RunTime:0.0090s ]
+SQL: SELECT `score` FROM `member` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `member_level` [ RunTime:0.0090s ]
+SQL: SELECT `id`,`discount` FROM `member_level` WHERE `bottom` <= '341' AND `top` >= '341' LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `member_goods_price` [ RunTime:0.0090s ]
+SQL: SELECT `price` FROM `member_goods_price` WHERE `goods_id` = 4 AND `member_level_id` = null LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT `price` FROM `member_goods_price` WHERE `goods_id` = 6 AND `member_level_id` = null LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT `price` FROM `member_goods_price` WHERE `goods_id` = 7 AND `member_level_id` = null LIMIT 1   [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Undefined variable: user_info E:\IT\www508\www.shop.com\Application\Runtime\Cache\Home\632645a6365f3d366ac91b0ef93b460e.php 第 133 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.035002s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.036002s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.003000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.003000s ]
+
+[ 2016-06-05T19:39:37+08:00 ] 127.0.0.1 /Application/Uploads/2016-05-25/5745c1eed21fb.jpg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
+
+[ 2016-06-05T19:39:37+08:00 ] 127.0.0.1 /Member/getUserInfo.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.003001s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.003000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003000s ]
+SQL: SHOW COLUMNS FROM `member` [ RunTime:0.0110s ]
+
+[ 2016-06-05T19:39:42+08:00 ] 127.0.0.1 /cart/flow1.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `shopping_car` [ RunTime:0.0100s ]
+SQL: SELECT `goods_id`,`amount` FROM `shopping_car` WHERE `member_id` = 1  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `goods` [ RunTime:0.0100s ]
+SQL: SELECT * FROM `goods` WHERE `id` IN (4,7,6)  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `member` [ RunTime:0.0090s ]
+SQL: SELECT `score` FROM `member` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `member_level` [ RunTime:0.0120s ]
+SQL: SELECT `id`,`discount` FROM `member_level` WHERE `bottom` <= '341' AND `top` >= '341' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `member_goods_price` [ RunTime:0.0080s ]
+SQL: SELECT `price` FROM `member_goods_price` WHERE `goods_id` = 4 AND `member_level_id` = null LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT `price` FROM `member_goods_price` WHERE `goods_id` = 6 AND `member_level_id` = null LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT `price` FROM `member_goods_price` WHERE `goods_id` = 7 AND `member_level_id` = null LIMIT 1   [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Undefined variable: user_info E:\IT\www508\www.shop.com\Application\Runtime\Cache\Home\632645a6365f3d366ac91b0ef93b460e.php 第 133 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.035002s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.035002s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.003001s ]
+INFO: [ app_end ] --END-- [ RunTime:0.003001s ]
+
+[ 2016-06-05T19:39:43+08:00 ] 127.0.0.1 /Application/Uploads/2016-05-25/5745c1eed21fb.jpg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
+
+[ 2016-06-05T19:39:43+08:00 ] 127.0.0.1 /Member/getUserInfo.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002001s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002001s ]
+SQL: SHOW COLUMNS FROM `member` [ RunTime:0.0100s ]
+
+[ 2016-06-05T19:39:45+08:00 ] 127.0.0.1 /Cart/flow2.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.004000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004000s ]
+SQL: SHOW COLUMNS FROM `shopping_car` [ RunTime:0.0090s ]
+SQL: SHOW COLUMNS FROM `address` [ RunTime:0.5020s ]
+SQL: SELECT * FROM `address` WHERE `member_id` = 1  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `delivery` [ RunTime:0.0540s ]
+SQL: SELECT * FROM `delivery` WHERE `status` = 1  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `payment` [ RunTime:0.0460s ]
+SQL: SELECT * FROM `payment` WHERE `status` = 1  [ RunTime:0.0020s ]
+SQL: SELECT `goods_id`,`amount` FROM `shopping_car` WHERE `member_id` = 1  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `goods` [ RunTime:0.0110s ]
+SQL: SELECT * FROM `goods` WHERE `id` IN (4,7,6)  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `member` [ RunTime:0.0110s ]
+SQL: SELECT `score` FROM `member` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `member_level` [ RunTime:0.0100s ]
+SQL: SELECT `id`,`discount` FROM `member_level` WHERE `bottom` <= '341' AND `top` >= '341' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `member_goods_price` [ RunTime:0.0110s ]
+SQL: SELECT `price` FROM `member_goods_price` WHERE `goods_id` = 4 AND `member_level_id` = null LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `price` FROM `member_goods_price` WHERE `goods_id` = 6 AND `member_level_id` = null LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `price` FROM `member_goods_price` WHERE `goods_id` = 7 AND `member_level_id` = null LIMIT 1   [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: user_info E:\IT\www508\www.shop.com\Application\Runtime\Cache\Home\64564d98cc9343b26eb8037cae0ef6da.php 第 264 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.081005s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.082005s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.007000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.007000s ]
+
+[ 2016-06-05T19:39:45+08:00 ] 127.0.0.1 /Application/Uploads/2016-05-25/5745c1eed21fb.jpg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002001s ]
+
+[ 2016-06-05T19:39:45+08:00 ] 127.0.0.1 /Member/getUserInfo.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003000s ]
+SQL: SHOW COLUMNS FROM `member` [ RunTime:0.0130s ]
+

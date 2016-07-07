@@ -1,0 +1,94 @@
+<extend name="Public:base" />
+<block name="css">
+    <css href="__CSS__/page.css"/>
+    <css href="__UPLOADIFY__/common.css"/>
+</block>
+<block name="content">
+<h1>
+    <span class="action-span"><a href="{:U('index')}">品牌管理列表</a></span>
+    <span class="action-span1"><a href="{:U('Index/index')}">京东 管理中心</a></span>
+    <span id="search_id" class="action-span1">--{$meta_title} </span>
+    <div style="clear:both"></div>
+</h1>
+<div class="main-div">
+    <form method="post" action="{:U('')}"enctype="multipart/form-data" >
+        <table cellspacing="1" cellpadding="3" width="100%">
+            <tr>
+                <td class="label">品牌名称</td>
+                <td>
+                    <input type="text" name="name" maxlength="60" value="{$row.name}" />
+                    <span class="require-field">*</span>
+                </td>
+            </tr>
+            <tr>
+            <td class="label">品牌简介</td>
+            <td>
+                <textarea  name="intro" cols="60" rows="4" >{$row.intro}</textarea>
+            </td>
+        </tr>
+            <tr>
+                <td class="label">品牌LOGO</td>
+                <td>
+                    <input type="hidden" name="logo" value="{$row.logo}" id="logo-data"/>
+                    <input type="file" name="logo" id="logo" size="45" disabled="false" class="logo"><br/>
+                    <img src="{$row.logo}" id="logo-preview" style="margin-top: 5px;width:80px;"/><br/>
+                    <span class="notice-span" style="display:block"  id="warn_brandlogo">请上传图片，做为品牌的LOGO！</span>
+                </td>
+            </tr>
+
+            <tr>
+                <td class="label">品牌排序</td>
+                <td>
+                    <input type="text" name="sort" maxlength="40" size="15" value="{$row.sort|default=20}" />
+                </td>
+            </tr>
+            <tr>
+                <td class="label">是否使用</td>
+                <td>
+                    <input type="radio" name="status" value="1" checked="checked" class="status" /> 是
+                    <input type="radio" name="status" value="0" class="status" /> 否
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2" align="center"><br />
+                    <input type="hidden" name="id" value="{$row.id}" />
+                    <input type="submit" class="button" value="确定" />
+                    <input type="reset" class="button" value="重置" />
+                </td>
+            </tr>
+        </table>
+    </form>
+</div>
+</block>
+<block name="js">
+    <js href="__JS__/jquery.min.js"/>
+    <js href="__UPLOADIFY__/jquery.uploadify.min.js"/>
+    <js href="__LAYER__/layer.js"/>
+    <js href='__ZTREE__/js/jquery.ztree.core.min.js'/>
+    <script type="text/javascript">
+        $(function(){
+            $('.status').val([{$row.status|default=1}]);
+            $('#logo').uploadify({
+                'swf'          : '__UPLOADIFY__/uploadify.swf',
+                'uploader'     : '{:U("Upload/upload")}',
+                buttonClass    :'fansy',
+                buttonText     :'选择文件',        //上传按钮的文字提示
+                fileObjName    :'logo',             //上传文件的控件名称
+                fileSizeLimit  :'1024KB',         //文件大小
+                fileTypeExts   :'*.jpg;*.png;*.gif',//允许上传的文件后缀
+                removeTimeout  :2,                  //上传完成后进度条停留时间
+                onUploadSuccess:function(file,data,response){
+                    data = $.parseJSON(data);
+                    if(data.status){
+                        //把地址放到隐藏域中
+                        $('#logo-data').val(data.file_url);
+                        $('#logo-preview').attr('src',data.file_url);
+                        layer.msg('上传成功',{icon:6,time:2000});
+                    }else{
+                        layer.msg(data.msg,{icon:5,time:2000});
+                    }
+                },
+            });
+        });
+    </script>
+</block>

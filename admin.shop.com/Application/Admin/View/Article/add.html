@@ -1,0 +1,79 @@
+<extend name="Public:base"/>
+<block name="css">
+    <css href="__CSS__/page.css"/>
+</block>
+<block name="content">
+    <h1>
+        <span class="action-span"><a href="{:U('index')}">文章管理列表</a></span>
+        <span class="action-span1"><a href="{:U('Index/index')}">京东 管理中心</a></span>
+        <span id="search_id" class="action-span1">--{$meta_title} </span>
+
+        <div style="clear:both"></div>
+    </h1>
+    <div class="main-div">
+        <form method="post" action="{:U('')}" enctype="multipart/form-data">
+            <table cellspacing="1" cellpadding="3" width="100%">
+                <tr>
+                    <td class="label">文章名称</td>
+                    <td>
+                        <input type="text" name="name" maxlength="60" value="{$row.name}"/>
+                        <span class="require-field">*</span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="label">文章分类</td>
+                    <td>
+                        <select name="article_category_id" class="article_category_id">
+                            <option value="">请选择</option>
+                            <volist name="article_categories" id="article_category">
+                                <option value="{$article_category.id}">{$article_category.name}</option>
+                            </volist>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="label">文章简介</td>
+                    <td>
+                        <textarea name="intro" cols="30" rows="3">{$row.intro}</textarea>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="label">详细内容</td>
+                    <td>
+                        <textarea name="content" cols="30" rows="5">{$row.content}</textarea>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="label">文章排序</td>
+                    <td>
+                        <input type="text" name="sort" maxlength="40" size="15" value="{$row.sort|default=20}"/>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="label">是否显示</td>
+                    <td>
+                        <input type="radio" name="status" value="1" checked="checked" class="status"/> 是
+                        <input type="radio" name="status" value="0" class="status"/> 否
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2" align="center"><br/>
+                        <input type="hidden" name="id" value="{$row.id}"/>
+                        <input type="submit" class="button" value="确定"/>
+                        <input type="reset" class="button" value="重置"/>
+                    </td>
+                </tr>
+            </table>
+        </form>
+    </div>
+</block>
+<block name="js">
+    <js href="__JS__/jquery.min.js"/>
+    <script type="text/javascript">
+        $('.status').val([{$row['status']|default= 1}]);
+        $('.is_help').val([{$row['is_help']|default= 1}]);
+        <present name="row">
+            $('.article_category_id').val([{$row['article_category_id']}]);
+        </present>
+    </script>
+</block>

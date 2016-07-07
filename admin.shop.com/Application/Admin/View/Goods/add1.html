@@ -1,0 +1,342 @@
+<extend name="Public:base" />
+<block name="css">
+    <css href='__ZTREE__/css/zTreeStyle/zTreeStyle.css'/>
+    <css href="__UPLOADIFY__/common.css"/>
+    <style type="text/css">
+        .myupload-pre-item img{
+            width:150px;
+        }
+
+        .myupload-pre-item{
+            display:inline-block;
+        }
+
+        .myupload-pre-item a{
+            position:relative;
+            top:5px;
+            right:15px;
+            float:right;
+            color:red;
+            font-size:16px;
+            text-decoration:none;
+        }
+
+        /**商品分类的ztree样式**/
+        .ztree{
+            width:220px;
+            height:auto;
+            margin-top: 10px;
+            border: 1px solid #617775;
+            background: #f0f6e4;
+            overflow-y: scroll;
+            overflow-x: auto;
+        }
+    </style>
+</block>
+<block name="content">
+    <h1>
+        <span class="action-span"><a href="{:U('index')}">商品列表</a>
+        </span>
+        <span class="action-span1"><a href="__GROUP__">ECSHOP 管理中心</a></span>
+        <span id="search_id" class="action-span1"> - {$meta_title} </span>
+        <div style="clear:both"></div>
+    </h1>
+
+    <div class="tab-div">
+        <div id="tabbody-div">
+            <form enctype="multipart/form-data" action="{:U('')}" method="post">
+                <table width="90%" id="general-table" align="center">
+                    <tr>
+                        <td class="label">商品名称：</td>
+                        <td><input type="text" name="name" value="{$row.name}" size="30" />
+                            <span class="require-field">*</span></td>
+                    </tr>
+                    <tr>
+                        <td class="label">商品货号： </td>
+                        <td>
+                            <input type="text" name="sn" value="{$row.sn}" size="20"/>
+                            <span id="goods_sn_notice"></span>
+                            <span class="notice-span"id="noticeGoodsSN">如果您不输入商品货号，系统将自动生成一个唯一的货号。</span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="label">LOGO：</td>
+                        <td>
+                            <input type="hidden" name="logo" value="{$row.logo}" id="logo-data"/>
+                            <input type="file" id="logo"/>
+                            <img src="{$row.logo}" id="logo-preview" style="margin-top: 5px;width:80px;height:50px"/>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="label">商品分类：</td>
+                        <td>
+                            <input type="hidden" name='goods_category_id' id="goods_category_id" value=""/>
+                            <input type="text" id="goods_category_name" value="请选择" disabled="disabled" style="padding-left:5px;"/>
+                            <ul id='goods-categories-tree' class='ztree' style='height:auto;'></ul>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="label">商品品牌：</td>
+                        <td>
+                            {:selects($brands,'id','name','brand_id',$row['brand_id'])}
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="label">供货商:</td>
+                        <td>
+
+                            {:selects($suppliers,'id','name','supplier_id',$row['supplier_id'])}
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td class="label">本店售价：</td>
+                        <td>
+                            <input type="text" name="shop_price" value="{$row.shop_price}" size="20"/>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="label">市场售价：</td>
+                        <td>
+                            <input type="text" name="market_price" value="{$row.market_price}" size="20" />
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="label">商品数量：</td>
+                        <td>
+                            <input type="text" name="stock" size="8" value="{$row.stock|default=100}"/>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td class="label">加入推荐：</td>
+                        <td>
+                            <label><input type="checkbox" name="goods_status[]" value="1" class='goods_status'/> 精品</label> 
+                            <label><input type="checkbox" name="goods_status[]" value="2" class='goods_status'/> 新品</label> 
+                            <label><input type="checkbox" name="goods_status[]" value="4" class='goods_status'/> 热销</label>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="label">推荐排序：</td>
+                        <td>
+                            <input type="text" name="sort" size="5" value="{$row.sort|default=20}"/>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td class="label">是否上架：</td>
+                        <td>
+                            <label><input type="radio" name="is_on_sale" value="1" class='is_on_sale'/> 是</label>
+                            <label><input type="radio" name="is_on_sale" value="0" class='is_on_sale'/> 否</label>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td></td>
+                        <td><hr /></td>
+                    </tr>
+
+                    <tr>
+                        <td class="label">商品详细描述：</td>
+                        <td>
+                            <textarea name="content" cols="40" rows="3" id='editor'>{$row.content}</textarea>
+                        </td>
+                    </tr>
+
+
+                    <tr>
+                        <td></td>
+                        <td><hr /></td>
+                    </tr>
+
+                    <tr>
+                        <td class="label">商品相册：</td>
+                        <td>
+                            <div class="myupload-img-box">
+                                <foreach name='row.paths' item='path'>
+                                    <div class="myupload-pre-item">
+                                        <img src="{$path}"/>
+                                        <a href=""  data="{$key}" class="del-img">×</a>
+                                    </div>
+                                </foreach>
+                            </div>
+
+                            <div>
+                                <input type="file" id='gallery' />
+                            </div>
+                        </td>
+                    </tr>
+                </table>
+
+
+                <div class="button-div">
+                    <input type='hidden' name='id' value='{$row.id}'/>
+                    <input type="submit" value=" 确定 " class="button"/>
+                    <input type="reset" value=" 重置 " class="button" />
+                </div>
+            </form>
+        </div>
+    </div>
+</block>
+<block name='js'>
+    <js href='__JS__/jquery.min.js'/>
+    <js href='__UE__/ueditorpersonal.config.js'/>
+    <js href='__UE__/ueditor.all.min.js'/>
+    <js href='__UE__/lang/zh-cn/zh-cn.js'/>
+    <js href='__ZTREE__/js/jquery.ztree.core.min.js'/>
+    <js href="__UPLOADIFY__/jquery.uploadify.min.js"/>
+    <js href="__LAYER__/layer.js"/>
+    <script type="text/javascript">
+    $(function(){
+        //实例化编辑器
+        //建议使用工厂方法getEditor创建和引用编辑器实例，如果在某个闭包下引用该编辑器，直接调用UE.getEditor('editor')就能拿到相关的实例
+        var ue = UE.getEditor('editor',{serverUrl: '{:U('Editor/ueditor')}'});
+        
+        show_goods_category_tree();
+        
+        //回显是否上架
+        $('.is_on_sale').val([1]);
+        
+        
+        //回显商品促销状态
+        <present name="row">
+            var goods_status = {$row.goods_status};
+            var goods_status_checked = [];
+            if(goods_status & 1){
+                goods_status_checked.unshift(1);
+            }
+            if(goods_status & 2){
+                goods_status_checked.unshift(2);
+            }
+            if(goods_status & 4){
+                goods_status_checked.unshift(4);
+            }
+            $('.goods_status').val(goods_status_checked);
+        </present>
+
+        //上传logo
+        up_logo();
+        //上传相册
+        up_gallery();
+
+    // 绑定js事件在x按钮上
+    $('.myupload-img-box').on('click','.del-img',function(){
+       // 1 如果是数据表中已有的执行ajax操作
+          var gallery_id = $(this).attr('data');
+         var flag= true;
+        var msg= '删除成功';
+        if(gallery_id){
+            var url='{:U("Gallery/delete")}';
+            var data ={id:gallery_id};
+            $.getJSON(url,data,function (response) {
+                 // 判断是否删除成功
+                flag = response.status;
+                msg = response.info;
+                console.debug(response)
+
+            });
+        }
+        // 如果是刚上传的直接移出div即可
+        if(flag){
+           // alert(1);
+
+            $(this).parent().remove();
+
+            layer.msg(msg);
+
+        }
+        return false;
+
+    })
+
+
+    });
+
+    
+    //将商品分类使用ztree展示
+    function show_goods_category_tree(){
+        
+        var setting = {
+            data: {
+                simpleData: {
+                    enable: true,
+                    pIdKey: "parent_id",
+                }
+            },
+            callback: {
+                onClick: function(event,tree_id,tree_node){
+                    //我们可以通过第三个参数获取到点击的节点
+                    var goods_category_name = tree_node.name;
+                    var goods_category_id = tree_node.id;
+                 //   console.debug(goods_category_name,goods_category_id);
+                    $('#goods_category_id').val(goods_category_id);
+                    $('#goods_category_name').val(goods_category_name);
+                },
+            }
+        };
+
+        var zNodes = {$goods_categories};
+        var goods_category_ztree = $.fn.zTree.init($("#goods-categories-tree"), setting, zNodes);
+        goods_category_ztree.expandAll(true);
+        <present name="row">
+            var goods_category_node = goods_category_ztree.getNodeByParam('id',{$row.goods_category_id});
+            goods_category_ztree.selectNode(goods_category_node);
+            $('#goods_category_id').val(goods_category_node.id);
+            $('#goods_category_name').val(goods_category_node.name);
+        </present>
+    }
+
+
+    function up_logo(){
+        $('#logo').uploadify({
+                    swf: '__UPLOADIFY__/uploadify.swf',//上传的flash程序
+                    uploader: '{:U("Upload/upload")}',//上传给那个文件处理
+                    buttonText:' 选择文件 ',//上传按钮的文字提示
+                    fileObjName:'logo',//上传文件的控件名称
+                    fileSizeLimit:'2024KB',//文件大小
+                    fileTypeExts:'*.jpg;*.png;*.gif',//允许上传的文件后缀
+                    removeTimeout:1,//上传完成后进度条停留时间
+                    onUploadSuccess:function(file,data,response){
+                        data = $.parseJSON(data);
+                        //上传成功
+                        if(data.status){
+                            //把地址放到隐藏域中
+                            $('#logo-data').val(data.file_url);
+                            $('#logo-preview').attr('src',data.file_url);
+                            layer.msg('上传成功',{icon:6,time:1000});
+                        }else{
+                            layer.msg(data.msg,{icon:5,time:1000});
+                        }
+                    },
+                });
+    }
+    function up_gallery(){
+        $('#gallery').uploadify({
+                    swf: '__UPLOADIFY__/uploadify.swf',//上传的flash程序
+                    uploader: '{:U("Upload/upload")}',//上传给那个文件处理
+                    buttonText:' 选择文件 ',//上传按钮的文字提示
+                    fileObjName:'logo',//上传文件的控件名称
+                    fileSizeLimit:'1024KB',//文件大小
+                    fileTypeExts:'*.jpg;*.png;*.gif',//允许上传的文件后缀
+                    removeTimeout:1,//上传完成后进度条停留时间
+                    onUploadSuccess:function(file,data,response){
+                        data = $.parseJSON(data);
+                        //上传成功
+                        if(data.status){
+                            //把地址放到隐藏域中
+                            //添加一个图片div,用来展示
+                            var html = '<div class="myupload-pre-item">';
+                            html += '<input type="hidden" name="path[]" value="' + data.file_url + '"/>';
+                            html += '<img src="'+data.file_url+'"/>';
+                            html += '<a href="#" class="del-img">×</a>';
+                            html += '</div>';
+                            $(html).appendTo($('.myupload-img-box'));
+                            layer.msg('上传成功',{icon:6,time:1000});
+                        }else{
+                            layer.msg(data.msg,{icon:5,time:1000});
+                        }
+                    },
+                });
+    }
+    </script>
+</block>

@@ -1,0 +1,6 @@
+[ 2016-05-14T12:28:03+08:00 ] 127.0.0.1 /favicon.ico
+ERR: 无法加载模块:Favicon
+
+[ 2016-05-14T16:53:12+08:00 ] 127.0.0.1 /Public/Admin/ext/ueditor/ueditor.min.js
+ERR: 无法加载模块:Public
+
